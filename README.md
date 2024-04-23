@@ -56,7 +56,9 @@ terraform plan
 terraform apply
 ```
 9. Logar no [portal.azure.com](https://portal.azure.com/) e conferir o deploy do ADLS.
-11. Destruir os recursos criados.
+10. Destruir os recursos criados.
 ```bash copy
 terraform destroy
 ```
+
+Nota: Caso queira usar o `apply` e `destroy` sem a necessidade confirmação, você pode usar a tag `-auto-approve` (use com bastante cuidado!).
