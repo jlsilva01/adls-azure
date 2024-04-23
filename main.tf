@@ -4,14 +4,14 @@ resource "random_id" "storage_account_name_unique" {
 
 # Criar um Azure Data Lake Storage Gen2
 resource "azurerm_storage_account" "storage" {
-  name                            = "datalake${random_id.storage_account_name_unique.hex}"
-  resource_group_name             = var.resource_group_name
-  location                        = var.location
-  account_tier                    = "Standard"
-  account_replication_type        = "LRS"
-  account_kind                    = "StorageV2"
-  is_hns_enabled                  = true
-  allow_nested_items_to_be_public = false
+  name                     = "datalake${random_id.storage_account_name_unique.hex}"
+  resource_group_name      = var.resource_group_name
+  location                 = var.location
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
+  account_kind             = "StorageV2"
+  is_hns_enabled           = true
+
 
   blob_properties {
 
@@ -24,7 +24,14 @@ resource "azurerm_storage_account" "storage" {
   }
 }
 
-# Criar tres containers dentro do Azure Data Lake Storage Gen2: Bronze, Silver e Gold
+# Criar quatro containers dentro do Azure Data Lake Storage Gen2: Landing-zone, Bronze, Silver e Gold
+resource "azurerm_storage_container" "landing-zone" {
+  name                  = "landing-zone"
+  storage_account_name  = azurerm_storage_account.storage.name
+  container_access_type = "private"
+}
+
+
 resource "azurerm_storage_container" "bronze" {
   name                  = "bronze"
   storage_account_name  = azurerm_storage_account.storage.name
@@ -42,3 +49,7 @@ resource "azurerm_storage_container" "gold" {
   storage_account_name  = azurerm_storage_account.storage.name
   container_access_type = "private"
 }
+
+
+
+

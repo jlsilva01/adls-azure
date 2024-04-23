@@ -8,6 +8,11 @@ output "adls_dfs_endpoint" {
   value       = azurerm_storage_account.storage.primary_dfs_endpoint
 }
 
+output "adls_container_landing_zone" {
+  description = "Name of the created storage container landing-zone"
+  value       = azurerm_storage_container.landing-zone.name
+}
+
 output "adls_container_bronze" {
   description = "Name of the created storage container bronze"
   value       = azurerm_storage_container.bronze.name
