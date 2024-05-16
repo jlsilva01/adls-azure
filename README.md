@@ -79,4 +79,4 @@ terraform apply
 terraform destroy
 ```
 
-> <b>Nota:</b> Caso queira usar o `apply` e `destroy` sem a necessidade confirmação, você pode usar a tag `-auto-approve` ==(use com bastante cuidado!)==.
+> <b>Nota:</b> Caso queira usar o `apply` e `destroy` sem a necessidade confirmação, você pode usar a tag `-auto-approve` (use com bastante cuidado!).
