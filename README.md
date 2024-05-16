@@ -18,8 +18,8 @@
 ```bash  copy
 az login
 ```
-**Atenção:** Caso você não tenha nenhuma assinatura paga (só tenha a assinatura do MS LEARN SANDBOX), pode pular direto para o passo 6.
 
+> **Atenção:** Caso você não tenha nenhuma assinatura paga (só tenha a assinatura do MS LEARN SANDBOX), pode pular direto para o passo 6.
 
 #### 3. Conferir sua assinatura atual
 ```bash copy
@@ -79,4 +79,4 @@ terraform apply
 terraform destroy
 ```
 
-<b>Nota:</b> Caso queira usar o `apply` e `destroy` sem a necessidade confirmação, você pode usar a tag `-auto-approve` (use com bastante cuidado!).
+> <b>Nota:</b> Caso queira usar o `apply` e `destroy` sem a necessidade confirmação, você pode usar a tag `-auto-approve` ==(use com bastante cuidado!)==.
