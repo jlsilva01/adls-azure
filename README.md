@@ -14,14 +14,14 @@
 #### 1. Ativar uma assinatura de testes
 [MS Learn Sandbox (Area Restrita)](https://learn.microsoft.com/pt-br/training/modules/develop-test-deploy-azure-functions-with-core-tools/5-exercise-publish-function-core-tools?ns-enrollment-type=learningpath&ns-enrollment-id=learn.create-serverless-applications) - Concierge Subscription (4 hora de duração) - 
 
-#### 2. Efetuar o login no Azure através do Azure CLI.
+#### 2. Efetuar o login no Azure através do Azure CLI
 ```bash  copy
 az login
 ```
 **Atenção:** Caso você não tenha nenhuma assinatura paga (só tenha a assinatura do MS LEARN SANDBOX), pode pular direto para o passo 6.
 
 
-#### 3. Conferir sua assinatura atual.
+#### 3. Conferir sua assinatura atual
 ```bash copy
 az account show -o table
 ```
@@ -32,23 +32,23 @@ Utilize o comando abaixo (troque o e-mail abaixo pelo e-mail da sua conta Azure)
 az account list --query "[?user.name=='jlsilva01@yahoo.com.br'].{Name:name, ID:id, Default:isDefault}" -o table
 ```
 
-#### 5. Utilizar a assinatura gratuita, ativada no item 1 deste.
+#### 5. Utilizar a assinatura gratuita, ativada no item 1 deste
 ```bash  copy
 az account set --subscription "Concierge Subscription"
 ```
 
-#### 6. Consultar o nome do Resource Group criado para a sua conta do Concierge Subscription.
+#### 6. Consultar o nome do Resource Group criado para a sua conta do Concierge Subscription
 ```bash copy
 az group list -o table
 ```
-#### 7. Ajustar a variável *resource_group_name* do arquivo `variables.tf` com o nome do Resource Group informado no passo anterior.
+#### 7. Ajustar a variável *resource_group_name* do arquivo `variables.tf` com o nome do Resource Group informado no passo anterior
 ```terraform
 variable "resource_group_name" {
   default = "learn-877e311a-66ab-401b-9372-06326c9bd083"
 }
 ```
 
-#### 8. Criar os recursos na assinatura Azure selecionada.
+#### 8. Criar os recursos na assinatura Azure selecionada
 
 ##### 8.1. Inicializar o Terraform na pasta atual
 ```bash copy
@@ -70,7 +70,7 @@ terraform plan
 ```bash copy
 terraform apply
 ```
-##### 8.6. Logar no portal do Azure e validar a criação do Azure Data Lake Storage Gen2.
+##### 8.6. Logar no portal do Azure e validar a criação do Azure Data Lake Storage Gen2
 9. Logar no [portal.azure.com](https://portal.azure.com/) e conferir o deploy do ADLS.
 
 ##### 8.7. Remover todos os recursos implantados na cloud - assinatura MS LEARN SANDBOX
