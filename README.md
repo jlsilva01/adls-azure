@@ -12,7 +12,7 @@
 ### Roteiro:
 
 #### 1. Ativar uma assinatura de testes
-[MS Learn Sandbox (Area Restrita)](https://learn.microsoft.com/pt-br/training/modules/develop-test-deploy-azure-functions-with-core-tools/5-exercise-publish-function-core-tools?ns-enrollment-type=learningpath&ns-enrollment-id=learn.create-serverless-applications) - Concierge Subscription (4 hora de duração) - 
+[MS Learn Sandbox (Area Restrita)](https://learn.microsoft.com/pt-br/training/modules/build-serverless-api-with-functions-api-management/5-exercise-import-additional-functions-existing-api-gateway?ns-enrollment-type=learningpath&ns-enrollment-id=learn.create-serverless-applications) - Concierge Subscription (4 hora de duração) - 
 
 #### 2. Efetuar o login no Azure através do Azure CLI
 ```bash  copy
