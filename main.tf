@@ -28,28 +28,25 @@ resource "azurerm_storage_account" "storage" {
 resource "azurerm_storage_container" "landing-zone" {
   name                  = "landing-zone"
   storage_account_name  = azurerm_storage_account.storage.name
-  container_access_type = "private"
+  container_access_type = "container"
 }
 
 
 resource "azurerm_storage_container" "bronze" {
   name                  = "bronze"
   storage_account_name  = azurerm_storage_account.storage.name
-  container_access_type = "private"
+  container_access_type = "container"
 }
 
 resource "azurerm_storage_container" "silver" {
   name                  = "silver"
   storage_account_name  = azurerm_storage_account.storage.name
-  container_access_type = "private"
+  container_access_type = "container"
 }
 
 resource "azurerm_storage_container" "gold" {
   name                  = "gold"
   storage_account_name  = azurerm_storage_account.storage.name
-  container_access_type = "private"
+  container_access_type = "container"
 }
-
-
-
 

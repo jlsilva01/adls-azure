@@ -22,6 +22,7 @@ output "adls_container_silver" {
   description = "Name of the created storage container silver"
   value       = azurerm_storage_container.silver.name
 }
+
 output "adls_container_gold" {
   description = "Name of the created storage container gold"
   value       = azurerm_storage_container.gold.name
